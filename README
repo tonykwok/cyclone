@@ -1,0 +1,77 @@
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+ CYCLONE -- a simple backup and synchronization tool
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+
+V 1.4
+
+This program is distributed under DWTFYWT Public
+License. For more details, please read LICENSE file.
+
+
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+ AIMS and features
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+
+Cyclone is an easy to use, one- or two-way 
+synchronization tool. It use a clean command-line 
+interface. 
+
+It aims to be compact (less than 10 Ko) and 
+cross-platform (as it is coded in standard python).
+
+It is particularly usefull to backup or mirrorize
+two directories (locally available on the system).
+ 
+It focuse on usefull features, particularly :
+* Check files' timestamp before synchronizing
+* Extraneous files deletion
+* Exclusion patterns by extension, size or name
+
+
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+ GETTING started
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+
+Make a one-way synchronization from source to 
+target directories :
+$ cyclone.py push source_directory target_directory
+
+Make a two-way synchronization :
+$ cyclone.py mirror source_directory target_directory
+
+Cyclone provide some options :
+
+-v or --verbose :
+Get a verbose output (default not).
+
+-c or --cleanup :
+Delete extraneous files on the *target* directory 
+(whatever the synchronization mode (one- or two-way)
+
+-x or --exclude-path path1,path2,pathN
+Prevent files from synchronization by giving specific
+file's path name.
+
+-X or --exclude-ext .ext1,.ext2,.extN
+Prevent files from synchronization by giving specific
+file's extensions (.mp3 or .jpg for example).
+
+-S or --exclude-size
+Prevent files from synchronization by giving specific
+file's size in MegaBytes.
+
+-h or --help
+See help.
+
+
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+ INSTALLATION
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+
+You must install a standard Python environment 
+(>=2.5) : http://www.python.org/download/
+
+Cyclone could be used very directly :
+* unpack archive,
+* copy cyclone.py in a directory of your choice and,
+* execute the cyclone.py in command-line window.
